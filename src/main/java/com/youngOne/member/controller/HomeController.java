@@ -30,7 +30,9 @@ public class HomeController {
     @GetMapping("/api2")
     @ResponseBody
     public apiClass practiceAPI2(@RequestParam("name") String name) {
-
+        apiClass apiObject = new apiClass();
+        apiObject.setName(name);
+        return apiObject;
     }
 
     static class apiClass {
